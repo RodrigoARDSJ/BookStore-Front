@@ -10,6 +10,7 @@ import { CategoriaService } from "../categoria.service";
 })
 export class CategoriaCreateComponent implements OnInit {
   categoria: Categoria = {
+    id: '',
     nome: "",
     descricao: "",
   };
@@ -24,7 +25,7 @@ export class CategoriaCreateComponent implements OnInit {
         console.log(resposta);
 
         this.router.navigate(["categoria"]);
-        this.service.mensagem("Categoria craida com sucesso");
+        this.service.mensagem("Categoria criada com sucesso");
       },
       (err) => {
         for (let i = 0; i < err.error.errors.length; i++) {
@@ -32,5 +33,8 @@ export class CategoriaCreateComponent implements OnInit {
         }
       }
     );
+  }
+  cancel(): void {
+    this.router.navigate(['categoria'])
   }
 }

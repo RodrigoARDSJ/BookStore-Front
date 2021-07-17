@@ -24,6 +24,7 @@ import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { CategoriaDeleteComponent } from './components/view/categoria/categoria-delete/categoria-delete.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     HomeComponent,
     CategoriaReadComponent,
     CategoriaCreateComponent,
+    CategoriaDeleteComponent,
   ],
   imports: [
     AppRoutingModule,
