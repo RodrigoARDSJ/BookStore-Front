@@ -25,6 +25,7 @@ import { MatInputModule } from "@angular/material/input";
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { CategoriaDeleteComponent } from './components/view/categoria/categoria-delete/categoria-delete.component';
+import { CategoriaUpdateComponent } from './components/view/categoria/categoria-update/categoria-update.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { CategoriaDeleteComponent } from './components/view/categoria/categoria-
     CategoriaReadComponent,
     CategoriaCreateComponent,
     CategoriaDeleteComponent,
+    CategoriaUpdateComponent,
   ],
   imports: [
     AppRoutingModule,
