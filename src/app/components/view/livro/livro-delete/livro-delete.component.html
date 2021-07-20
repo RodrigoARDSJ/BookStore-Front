@@ -1,0 +1,56 @@
+<form action="">
+  <h1>Deletando um livro</h1>
+  <mat-form-field class="form">
+    <mat-label>Titulo:</mat-label>
+    <input
+      matInput
+      disabled
+      [(ngModel)]="livro.titulo"
+      placeholder="Ex. Anne de Green Gable"
+      name="tiulo"
+      type="text"
+      maxlength="100"
+      required
+    />
+  </mat-form-field>
+
+  <mat-form-field class="form">
+    <mat-label>Autor:</mat-label>
+    <input
+      matInput
+      disabled
+      [(ngModel)]="livro.nomeAutor"
+      placeholder="Ex. Jane Austen"
+      name="nomeAutor"
+      type="text"
+      maxlength="100"
+      required
+    />
+  </mat-form-field>
+  <mat-form-field class="form">
+    <mat-label>Texto:</mat-label>
+    <textarea
+      matInput
+      disabled
+      [(ngModel)]="livro.textoLivro"
+      placeholder="Ex. Lorem Ipsum"
+      name="textoLivro"
+      type="text"
+      maxlength="2000000"
+    ></textarea>
+  </mat-form-field>
+
+  <div class="buttons">
+    <button
+      
+      (click)="delete()"
+      mat-raised-button
+      color="primary"
+    >
+      Deletar
+    </button>
+    <button (click)="cancel()" mat-elevation-z8 mat-raised-button color="warn">
+      Cancelar
+    </button>
+  </div>
+</form>

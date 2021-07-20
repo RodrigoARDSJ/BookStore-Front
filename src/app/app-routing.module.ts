@@ -5,6 +5,11 @@ import { CategoriaDeleteComponent } from './components/view/categoria/categoria-
 import { CategoriaReadComponent } from './components/view/categoria/categoria-read/categoria-read.component';
 import { CategoriaUpdateComponent } from './components/view/categoria/categoria-update/categoria-update.component';
 import { HomeComponent } from './components/view/home/home.component';
+import { LivroCreateComponent } from './components/view/livro/livro-create/livro-create.component';
+import { LivroDeleteComponent } from './components/view/livro/livro-delete/livro-delete.component';
+import { LivroReadAllComponent } from './components/view/livro/livro-read-all/livro-read-all.component';
+import { LivroReadComponent } from './components/view/livro/livro-read/livro-read.component';
+import { LivroUpdateComponent } from './components/view/livro/livro-update/livro-update.component';
 
 const routes: Routes = [
     {   
@@ -28,6 +33,29 @@ const routes: Routes = [
     {
         path: 'categoria/update/:id',
         component: CategoriaUpdateComponent
+    },
+    {
+        path: 'categoria/:id_cat/livro',
+        component: LivroReadAllComponent
+    },
+    {
+        path: 'categoria/:id_cat/livro/create',
+        component: LivroCreateComponent
+    },
+
+    {
+        path:'categoria/:id_cat/livro/:id/update',
+        component: LivroUpdateComponent
+    },
+
+    {
+        path:'categoria/:id_cat/livro/:id/delete',
+        component: LivroDeleteComponent
+    },
+
+    {
+        path:'categoria/:id_cat/livro/:id/read',
+        component: LivroReadComponent
     }
 ];
 
